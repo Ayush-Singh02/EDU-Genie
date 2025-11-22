@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/mainContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Profile Card at Top -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/profileCard"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="28dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/lavender_border"
+                    android:padding="24dp">
+
+                    <!-- Profile Circle -->
+                    <ImageView
+                        android:id="@+id/profileCircle"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/baseline_person_24"
+                        android:background="@drawable/profile_circle"
+                        android:padding="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp" />
+
+                    <!-- Profile Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/profileCircle"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Profile &amp; Settings"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnSurface"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View profile and customize app settings"
+                            android:textSize="15sp"
+                            android:textColor="?attr/colorOnSurface"
+                            android:alpha="0.8" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Header Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/lavender_border"
+                android:padding="24dp"
+                android:layout_marginBottom="28dp">
+
+                <TextView
+                    android:id="@+id/welcomeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to EduGenie!"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/userNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your AI Study Buddy"
+                    android:textSize="17sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_gravity="center_horizontal"
+                    android:alpha="0.7" />
+
+            </LinearLayout>
+
+            <!-- Navigation Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <!-- AI Chat Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/aiChatCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="18dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:strokeWidth="1dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="24dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/baseline_person_24"
+                            android:background="?android:colorBackground"
+                            android:padding="12dp"
+                            android:layout_marginEnd="18dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AI Study Assistant"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimary"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Get help with homework, explanations, and study tips"
+                                android:textSize="15sp"
+                                android:textColor="?attr/colorOnSurface"
+                                android:alpha="0.7" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@android:drawable/ic_menu_send"
+                            android:tint="?attr/colorPrimary"
+                            android:layout_gravity="center_vertical" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Flashcards Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/flashcardsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="18dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:strokeWidth="1dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="24dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_add_flashcard"
+                            android:background="?android:colorBackground"
+                            android:padding="12dp"
+                            android:layout_marginEnd="18dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Flashcards"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/colorPrimary"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Create and review study flashcards"
+                                android:textSize="15sp"
+                                android:textColor="?attr/colorOnSurface"
+                                android:alpha="0.7" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@android:drawable/ic_input_add"
+                            android:tint="?attr/colorPrimary"
+                            android:layout_gravity="center_vertical" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Quick Stats Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="?android:colorBackground"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quick Stats"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorPrimary"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/lavender_border"
+                            android:padding="14dp"
+                            android:layout_marginEnd="8dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/ic_menu_agenda"
+                                android:tint="?attr/colorPrimary"
+                                android:layout_marginEnd="6dp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/flashcardCountText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="26sp"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorPrimary" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Flashcard Sets"
+                                    android:textSize="13sp"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:alpha="0.7" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/lavender_border"
+                            android:padding="14dp"
+                            android:layout_marginStart="8dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/ic_menu_send"
+                                android:tint="?attr/colorPrimary"
+                                android:layout_marginEnd="6dp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/chatCountText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="26sp"
+                                    android:textStyle="bold"
+                                    android:textColor="?attr/colorPrimary" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="AI Chats"
+                                    android:textSize="13sp"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:alpha="0.7" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- Floating Action Button for quick add -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="24dp"
+            android:src="@android:drawable/ic_input_add"
+            app:backgroundTint="?attr/colorPrimary"
+            app:tint="@android:color/white"
+            app:elevation="8dp"
+            app:borderWidth="0dp"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

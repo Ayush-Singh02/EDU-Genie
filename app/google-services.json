@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "189484685922",
+    "project_id": "edugenie-833d5",
+    "storage_bucket": "edugenie-833d5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189484685922:android:e5bf3b7162504b48d64f3b",
+        "android_client_info": {
+          "package_name": "com.example.edugenie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBPGmIwGXhfpzCcYYnDUiFiwOm20PSjbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

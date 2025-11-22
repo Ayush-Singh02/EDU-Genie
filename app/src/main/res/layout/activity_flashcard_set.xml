@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:colorBackground">
+
+    <!-- Header -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="1dp"
+        android:layout_margin="12dp"
+        android:backgroundTint="?attr/colorSurface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="?android:colorBackground"
+            android:padding="18dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← Back"
+                android:textSize="16sp"
+                android:backgroundTint="?attr/colorPrimaryContainer"
+                android:textColor="?attr/colorOnPrimaryContainer"
+                android:padding="10dp"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Flashcard Set"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/studyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Study"
+                android:textSize="15sp"
+                android:backgroundTint="?attr/colorSecondaryContainer"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:padding="10dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Content -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Flashcards Container -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="18dp"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:id="@+id/flashcardsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+        <!-- Empty State -->
+        <TextView
+            android:id="@+id/emptyStateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No flashcards yet.\nTap the + button to add your first card!"
+            android:textSize="17sp"
+            android:textColor="?attr/colorOnSurface"
+            android:alpha="0.6"
+            android:gravity="center"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_add_flashcard"
+        app:backgroundTint="?attr/colorPrimary"
+        app:tint="@android:color/white"
+        app:elevation="8dp"
+        app:borderWidth="0dp"
+        />
+
+</LinearLayout> 
